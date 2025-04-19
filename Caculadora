@@ -1,0 +1,31 @@
+print('## Caculadora ##\n')
+
+print('1-Soma ','2-Subtração ','3-Multiplicação ','4-Divisão', sep='\n')
+while True:
+   try:
+    escolha=int(input('Determine a operação que você deseja fazer (informe o número): '))
+    if 1<=escolha<5:
+        break
+    else:
+        print('Determine o número entre 1 à 4!')
+   except ValueError:
+       print('Digite um valor válido!')
+while True:
+    try:
+        a=float(input('Determine o valor de A:'))
+        b=float(input('Determine o valor de B:'))
+        break
+    except ValueError:
+        print('Determine valores válidos!')
+match escolha:
+    case 1:
+        print('A soma dos valores de A e B é: ',a+b)
+    case 2:
+        print('A subtração dos valores de A e B é: ',a-b)
+    case 3:
+        print('A multiplicação dos valores de A e B é: ',a*b)
+    case 4:
+        if b==0:
+            print('Não é possível dividir por zero!')
+        else:
+            print('A divisão dos valores de A e B é: ',a/b)
